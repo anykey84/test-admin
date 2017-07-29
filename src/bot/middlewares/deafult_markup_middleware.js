@@ -1,11 +1,12 @@
 const TelegramBot = require('telegraf');
+const env = process.env;
 
 
 module.exports = function (scope, next) {
   scope.i18n.t('undefinedCommand');
 
   const keyboards = [
-    `echo Test; exit 0;`,
+    `cd ${env.PROJECT_DIRECTORY}; git pull; yarn; npm run dist;`,
   ];
 
   scope.defaultKeyboard = TelegramBot
