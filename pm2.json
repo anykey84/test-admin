@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "Telegram Admin Bot",
+      "script": "src/index.js",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "watch": false,
+      "ignore_watch": [
+        "node_modules"
+      ],
+      "autorestart": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+.DS_*
+npm-debug.log
+node_modules/
+.idea/
+dist/
+*env

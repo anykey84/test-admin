@@ -1,0 +1,16 @@
+# Keyboards
+adminKeyboard: Администратирование
+
+# Success
+start: Бот для того, чтобы запускать комманды на сервере
+undefinedCommand: Такой команды нет
+
+# Error
+commonError: Произошла неизвестная ошибка
+
+# Dynamic
+languageSelected: Вы выбрали язык ${lang}
+notifyAboutError: '
+ОШИБКА:\n
+${err}
+'

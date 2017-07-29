@@ -1,0 +1,27 @@
+{
+  "name": "telegram_admin_bot",
+  "version": "1.0.0",
+  "description": "telegram_admin_bot",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "pm2 startOrReload pm2.json",
+    "dev": "node --use_strict src/index.js",
+    "test": "mocha tests/** --use_strict"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skarppion101/test-admin"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "dotenv": "4.0.0",
+    "optimist": "0.6.1",
+    "telegraf": "3.9.0",
+    "telegraf-i18n": "5.0.2"
+  },
+  "devDependencies": {
+    "mocha": "3.4.2",
+    "should": "11.2.1"
+  }
+}
