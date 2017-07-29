@@ -28,7 +28,7 @@ class DBLogger {
   }
 
   error(err) {
-    throw err;
+    console.error(err);
   }
 
   info(msg) {

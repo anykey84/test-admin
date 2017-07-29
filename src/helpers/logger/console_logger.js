@@ -19,7 +19,7 @@ class ConsoleLogger {
   }
 
   error(err) {
-    throw err;
+    console.error(err);
   }
 }
 

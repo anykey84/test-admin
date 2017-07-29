@@ -26,6 +26,7 @@ module.exports = class Bot {
     this.bot = new TelegramBot(env.TELEGRAM_API_KEY);
 
     // Middleware
+    this.bot.use(TelegramBot.memorySession());
     this.bot.use(i18n.middleware());
     this.bot.use(logMiddleware.bind(this));
     this.bot.use(authMiddleware.bind(this));
@@ -42,7 +43,8 @@ module.exports = class Bot {
     scope.update.message.text = scope.update.message.text || '';
     const msgText = scope.update.message.text;
 
-    exec(msgText, (err, stdout, stderr) => {
+    exec(msgText, (error, stdout, stderr) => {
+      const err = error || stderr;
       if(err) {
         this.notifyAboutError(scope, err);
         return this.logger.error(err);
