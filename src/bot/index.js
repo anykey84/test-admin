@@ -42,8 +42,8 @@ module.exports = class Bot {
     scope.update.message.text = scope.update.message.text || '';
     const msgText = scope.update.message.text;
 
-    exec(msgText, (error, stdout, stderr) => {
-      if(error) {
+    exec(msgText, (err, stdout, stderr) => {
+      if(err) {
         this.notifyAboutError(scope, err);
         return this.logger.error(err);
       }

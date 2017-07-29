@@ -4,7 +4,7 @@
  * "development" - for development (default)
  */
 // Get config from .env file
-require('dotenv').config({path: '../env'});
+require('dotenv').config({path: 'env'});
 const env = process.env;
 env.NODE_ENV = env.NODE_ENV || 'development';
 
